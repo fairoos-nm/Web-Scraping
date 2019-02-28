@@ -8,4 +8,4 @@ source_code = requests.get(url).text
 soup = BeautifulSoup(source_code, 'lxml')
 
 article =  soup.find("article")
-print(article)
+print(article.prettify())
