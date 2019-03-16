@@ -6,7 +6,7 @@ url = "https://coreyms.com/"
 source_code = requests.get(url).text
 
 soup = BeautifulSoup(source_code, 'lxml')
-csv_file = open("scrapec_csv.csv", "w")
+csv_file = open("scrape.csv", "w")
 csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['headline', 'summery', 'video_link'])
 for article in soup.find_all("article"):
